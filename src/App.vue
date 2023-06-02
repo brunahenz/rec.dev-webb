@@ -111,14 +111,12 @@ function formatarPreco(preco) {
   margin-right: 10px;
 }
 .container-geral {
-  /* display: flex;
-  justify-content: space-between; */
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-}
+  display: flex;
+  justify-content: space-between;
+} 
 
 .carrinho {
-  /* min-width: 20%; */
+  min-width: 20%;
 }
 .listagem-livros {
   display: flex;
