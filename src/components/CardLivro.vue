@@ -1,4 +1,5 @@
 <script setup>
+
 import { adicionarAoCarrinho } from '@/_data/carrinho.js';
 const props = defineProps({
     livro: Object
@@ -7,6 +8,7 @@ const props = defineProps({
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
 }
+
 </script>
 
 <template>
@@ -29,7 +31,6 @@ function formatarPreco(preco) {
 </template>
 
 <style scoped>
-
 
 .card-livro {
   margin: 5px 10px;
