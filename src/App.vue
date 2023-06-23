@@ -8,7 +8,7 @@ import MeuCarrinho from '@/components/MeuCarrinho.vue'
 
 <template>
 
-  <h1>Minha livraria</h1>
+  <h1>FutBols: Loja de bolas</h1>
   <div class="container-geral">
       <listagem-livros/>
       <meu-carrinho/>
@@ -21,6 +21,11 @@ import MeuCarrinho from '@/components/MeuCarrinho.vue'
 .container-geral {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  
 } 
+h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
 
 </style>
