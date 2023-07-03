@@ -24,7 +24,7 @@ import MeuCarrinho from '@/components/MeuCarrinho.vue'
   
 } 
 h1{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   text-align: center;
 }
 
