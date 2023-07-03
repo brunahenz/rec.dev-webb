@@ -44,6 +44,7 @@ function formatarPreco(preco) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .wrap-livro {

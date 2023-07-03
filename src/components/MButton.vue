@@ -20,6 +20,7 @@ button {
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 button:hover{
