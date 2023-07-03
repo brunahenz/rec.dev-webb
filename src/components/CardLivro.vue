@@ -21,12 +21,12 @@ function formatarPreco(preco) {
             <img :src="props.livro.img" alt="Capa do livro" class="capa-livro" />
           </div>
           <p class="titulo-livro">{{ props.livro.title }}</p>
-          <p class="autor-livro">{{ props.livro.author }}</p>
+          <p class="marca-livro">{{ props.livro.marca }}</p>
           <p class="preco-livro">{{ formatarPreco(props.livro.price) }}</p>
         </div>
         <div class="card-buttons-livros">
           <m-button @click="adicionarAoCarrinho(props.livro)" texto="Adicionar ao carrinho"/>
-          <m-button texto="Favoritar"/>
+          <m-button @click="" texto="Favoritar"/>
         </div>
       </div>
     
