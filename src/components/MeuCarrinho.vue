@@ -63,6 +63,9 @@ function formatarPreco(preco) {
 
 <style scoped>
 
+.carrinho {
+  font-family: 'Times New Roman', Times, serif;
+}
 .wrap-carrinho .carrinho-total {
     position: fixed;
     bottom: 3%;
