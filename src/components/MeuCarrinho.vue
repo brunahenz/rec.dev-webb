@@ -8,7 +8,9 @@ import {
   carrinho,
   adicionarAoCarrinho,
   removerItemCarrinho,
-  atualizaQuantidadeItem
+  atualizaQuantidadeItem,
+  adicionarAoFavoritos,
+  favoritar
 } from '@/_data/carrinho.js'
 
 function formatarPreco(preco) {
@@ -52,7 +54,7 @@ function formatarPreco(preco) {
           </div>
         </div>
         <m-button texto="Limpar"/>
-        <m-button texto="Fechar carrinho"/>
+        <m-button texto="Fechar carrinho" @click="$router.push({name: 'fechar-compra'})"/>
         <m-button texto="Favoritos"/>
         <m-button texto="Continuar comprando"/>
         <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
