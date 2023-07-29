@@ -29,10 +29,6 @@ function validar() {
     return false;
   }
 }
-function pagar (){
-    if (forma === 'pix')
-    {"digite sua chave"}
-}
 </script>
 
 
@@ -97,7 +93,7 @@ color:white;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: red;
+  background-color: brown;
 
 }
 .centro {
@@ -126,7 +122,7 @@ display: flex;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: red;
+  background-color: brown;
 color:white;
 
 

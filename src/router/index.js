@@ -3,6 +3,7 @@ import PagamentoView from '../views/PagamentoView.vue'
 import HomeView from '../views/HomeView.vue'
 import FecharCompraView from '../views/FecharCompraView.vue'
 
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -20,7 +21,8 @@ const router = createRouter({
       path: '/pagamento',
       name: 'pagamento',
       component: PagamentoView
-    }
+    },
+  
 
   ]
 })

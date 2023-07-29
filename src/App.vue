@@ -21,6 +21,8 @@ import { RouterView } from 'vue-router';
 h1{
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
+  background-color: brown;
+  color: white;
 }
 
 </style>

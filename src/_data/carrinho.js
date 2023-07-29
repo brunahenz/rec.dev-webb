@@ -5,10 +5,6 @@ const carrinho = ref({
   total: 0
 })
 
-const favoritar = ref({
-  itens: [],
-  total: 0
-})
 
 function atualizaQuantidadeItem(item) {
   carrinho.value.total -= item.total
@@ -38,27 +34,10 @@ function adicionarAoCarrinho(livro) {
   }
 }
 
-function adicionarAoFavoritos(livro) {
-  const index = favoritar.value.itens.findIndex((item) => item.id === livro.id)
-  if (index === -1) {
-    favoritar.value.itens.push({
-      ...livro,
-      quantidade: 1,
-      total: livro.price
-    })
-    favoritar.value.total += livro.price
-  } else {
-    favoritar.value.itens[index].quantidade++
-    favoritar.value.itens[index].total += livro.price
-    favoritar.value.total += livro.price
-  }
-}
 
 export {
   carrinho,
   adicionarAoCarrinho,
   removerItemCarrinho,
   atualizaQuantidadeItem,
-  adicionarAoFavoritos,
-  favoritar
 }

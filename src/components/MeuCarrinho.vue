@@ -10,6 +10,7 @@ import {
   removerItemCarrinho,
   atualizaQuantidadeItem,
 
+
 } from '@/_data/carrinho.js'
 
 function formatarPreco(preco) {
@@ -22,7 +23,8 @@ function formatarPreco(preco) {
 <template>
 
     <div class="carrinho">
-      <h2>Meu carrinho</h2>
+      <h2>Meu carrinho:</h2>
+
       <div class="wrap-carrinho">
         <m-message v-if="carrinho.itens.length === 0"/>
         <div v-else>
@@ -53,10 +55,8 @@ function formatarPreco(preco) {
             </div>
           </div>
         </div>
-        <m-button texto="Limpar"/>
-        <m-button texto="🛒" @click="$router.push({name: 'fechar-compra'})"/>
-        <m-button texto="⭐"/>
-        <m-button texto="Continuar comprando"/>
+        <m-button texto="Encerrar compra: " @click="$router.push({name: 'fechar-compra'})"/>
+        
         <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
       </div>
     </div>
