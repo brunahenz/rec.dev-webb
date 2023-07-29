@@ -7,7 +7,7 @@ const props = defineProps({
 <template>
 
      <button>{{ props.texto }}</button>
-
+     
 </template>
 
 <style scoped>

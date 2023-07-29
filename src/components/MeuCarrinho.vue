@@ -9,13 +9,13 @@ import {
   adicionarAoCarrinho,
   removerItemCarrinho,
   atualizaQuantidadeItem,
-  adicionarAoFavoritos,
-  favoritar
+
 } from '@/_data/carrinho.js'
 
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
 }
+
 
 </script>
 
@@ -54,8 +54,8 @@ function formatarPreco(preco) {
           </div>
         </div>
         <m-button texto="Limpar"/>
-        <m-button texto="Fechar carrinho" @click="$router.push({name: 'fechar-compra'})"/>
-        <m-button texto="Favoritos"/>
+        <m-button texto="🛒" @click="$router.push({name: 'fechar-compra'})"/>
+        <m-button texto="⭐"/>
         <m-button texto="Continuar comprando"/>
         <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
       </div>
