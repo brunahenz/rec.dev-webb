@@ -33,6 +33,10 @@ function adicionarAoCarrinho(livro) {
     carrinho.value.total += livro.price
   }
 }
+function RemoverItens (){
+  carrinho.value.itens = [],
+  carrinho.value.total = 0
+}
 
 
 export {
@@ -40,4 +44,5 @@ export {
   adicionarAoCarrinho,
   removerItemCarrinho,
   atualizaQuantidadeItem,
+  RemoverItens,
 }

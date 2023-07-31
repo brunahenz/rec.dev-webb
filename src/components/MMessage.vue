@@ -1,7 +1,7 @@
 
 <template>
 
-   <p>Seu carrinho está vazio</p>
+   <p>Seu carrinho está vazio.</p>
 
 </template>
 

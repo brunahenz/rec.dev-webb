@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import PagamentoView from '../views/PagamentoView.vue'
 import HomeView from '../views/HomeView.vue'
 import FecharCompraView from '../views/FecharCompraView.vue'
 
@@ -17,13 +16,6 @@ const router = createRouter({
       name: 'fechar-compra',
       component: FecharCompraView
     },
-    {
-      path: '/pagamento',
-      name: 'pagamento',
-      component: PagamentoView
-    },
-  
-
   ]
 })
 
