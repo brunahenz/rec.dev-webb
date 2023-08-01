@@ -46,15 +46,17 @@ function formatarPreco(preco) {
                       min="1"
                     />
                   </p>
-                  <button @click="removerItemCarrinho(item)">&#128465;</button>
+                  <button @click="removerItemCarrinho(item)">❌</button>
                   <p>Total: {{ formatarPreco(item.total) }}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <m-button texto="Encerrar compra: " @click="$router.push({name: 'fechar-compra'})"/>
         <m-button @click="RemoverItens()" texto="Limpar"/>
+        <hr>
+        <m-button texto="Encerrar compra: " @click="$router.push({name: 'fechar-compra'})"/>
+        
         
         <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
       </div>

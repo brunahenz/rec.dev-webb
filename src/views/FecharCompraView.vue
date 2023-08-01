@@ -57,7 +57,7 @@ function validar() {
                   Quantidade:
                   <input type="number" v-model="item.quantidade" @change="atualizaQuantidadeItem(item)" min="1" />
                 </p>
-                <button @click="removerItemCarrinho(item)">&#128465;</button>
+                <button @click="removerItemCarrinho(item)">❌</button>
                 <p>Total: {{ formatarPreco(item.total) }}</p>
                 <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
               </div>
@@ -67,7 +67,7 @@ function validar() {
       </div>
       <m-button @click="RemoverItens()" texto="Limpar carrinho" />
       <hr>
-      <m-button texto="Continuar comprando" @click="$router.push({ name: 'home' })" />
+      <m-button texto="Continuar comprando:" @click="$router.push({ name: 'home' })" />
     </div>
   </div>
   <div class="container">
