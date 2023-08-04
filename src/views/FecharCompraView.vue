@@ -18,6 +18,7 @@ const nome = ref('')
 const email = ref('')
 const cidade = ref('')
 const endereco = ref('')
+const estado= ref('')
 const forma = ref('')
 const senha = ref('')
 const obs = ref('')
@@ -32,6 +33,14 @@ function validar() {
     return false;
   }
 }
+
+function validarForma() {
+  if (forma.value === "Pix") {
+    return ;
+  }
+  else {
+    return false;
+  }}
 
 
 </script>
@@ -82,13 +91,6 @@ function validar() {
         <label for="">Email:</label>
         <input type="email" v-on:keypress="ok = false" v-model="email" placeholder="Digite seu email" />
         <hr>
-        <label for="">Senha:</label>
-        <input type="password" v-on:keypress="ok = false" v-model="senha" minlength="6" placeholder="Digite sua senha" />
-        <hr>
-        <label for="">Confirmar senha:</label>
-        <input type="password" v-on:keypress="ok = false" v-model="confirma" minlength="6"
-          placeholder="Digite sua senha novamente" />
-        <hr>
         <h2 class="titu">Endereço de entrega:</h2>
         <label for="">Endereço:</label>
         <input type="text" v-on:keypress="ok = false" v-model="endereco" placeholder="Digite seu endereço" />
@@ -96,45 +98,60 @@ function validar() {
         <label for="">Cidade:</label>
         <input type="text" v-on:keypress="ok = false" v-model="cidade" placeholder="Digite sua cidade" />
         <hr>
+        <label for="">Estado:</label>
+        <input type="text" v-on:keypress="ok = false" v-model="estado" placeholder="Digite seu estado" />
+      <hr>
         <h2 class="titu">Forma de pagamento:</h2>
-        <label for="estado">Pagamento:</label>
-        <select class= "font" v-on:keypress="ok = false" v-model="forma">
-          <option value="cartao">Cartão</option>
-          <option value="pix">Pix</option>
-          <option value="boleto">Boleto</option>
-        </select>
+        <label for="forma">Forma:</label>
+      <select v-on:keypress="ok = false" v-model="forma">
+        <option class="font" value="Pix">Pix</option>
+        <option class="font" value="Cartão">Cartão</option>
+        <option class="font" value="Boleto">Boleto</option>
+      </select>
+      <hr><label for="">Senha:</label>
+        <input type="password" v-on:keypress="ok = false" v-model="senha" minlength="6" placeholder="Digite sua senha" />
         <hr>
-        <h2 class="titu">Forma de pagamento:</h2>
-        <label for="">Observação:</label>
+        <label for="">Confirmar senha:</label>
+        <input type="password" v-on:keypress="ok = false" v-model="confirma" minlength="6"
+          placeholder="Digite sua senha novamente" />
+          <hr>
+          <h2 class="titu">Observação sobre o site:</h2>
         <input type="text" v-on:keypress="ok = false" v-model="obs" style="padding: 30px;"
           placeholder="Digite uma obs sobre a loja..." />
-<hr>
+        <hr>
         <button class="comp" type="submit">Finalizar</button>
       </div>
     </form>
     <div v-if="ok" class="baixo">
       <p>Total da compra é de: {{ formatarPreco(carrinho.total) }}</p>
-      <h2 class="titu">Dados pessoais:</h2>
-      <hr>
-      <p>O nome digitado é: {{ nome }}</p>
-      <p>O email digitado é: {{ email }}</p>
-      <p>A senha digitada é: {{ senha }}</p>
-      <p>A confirmação digitada é: {{ confirma }}</p>
-      <hr>
-      <h2 class="titu">Endereço de entrega:</h2>
-      <p>O endereço digitado é: {{ endereco }}</p>
-      <p>A cidade digitada é: {{ cidade }}</p>
-      <hr>
       <h2 class="titu">Forma de pagamento:</h2>
       <p>A forma de pagamento digitada é: {{ forma }}</p>
-      <hr>
-      <h2 class="titu">Forma de pagamento:</h2>
+      <div v-if="forma === 'Pix' "> 
+      <img class="img" src="https://miro.medium.com/v2/resize:fit:640/0*zPG9dqz508rmRR70." alt="">
+      <p class="num">OU CHAVE</p>
+      <h2 class="num">(47) 99856487</h2>
+      </div>
+      <div v-if="forma === 'Cartão' "> 
+      <img class="img" src="https://miro.medium.com/v2/resize:fit:640/0*zPG9dqz508rmRR70." alt="">
+      </div>
+      <p>A senha confirmada é de: {{ senha }}</p>
+       <p>A confirmação da senha é: {{ confirma }}</p>     
+      <h2 class="titu">Observação sobre o site:</h2>
       <p>Observação: {{ obs }}</p>
+    
     </div>
+
   </div>
 </template>
 
 <style scoped>
+.num{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  background-color: wheat;
+}
 .carrinho {
   display: flex;
   flex-direction: column;
@@ -165,7 +182,7 @@ function validar() {
   margin: 0;
 }
 .font{
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .detalhes-livro div {
@@ -209,7 +226,9 @@ function validar() {
   border-radius: #ccc 3px;
   font-size: 28px;
 }
-
+.img{
+  height: 300px;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -243,6 +262,7 @@ function validar() {
 
 label {
   display: block;
+  
 }
 
 input {
@@ -256,7 +276,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 138vh;
+  height: 100vh;
   color: white;
   max-width: 700px;
   padding: 25px;
