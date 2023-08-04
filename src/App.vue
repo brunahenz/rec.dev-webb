@@ -4,7 +4,7 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <h1>Henz's Store</h1>
+  <h1>HENZ'S STORE</h1>
   <div class="container-geral">
     <RouterView />
 
@@ -19,10 +19,10 @@ import { RouterView } from 'vue-router';
   
 } 
 h1{
-  font-family: 'Times New Roman', Times, serif;
+ 
   text-align: center;
-  background-color: brown;
-  color: black;
+  background-color: #111111;
+  color: #a0522d;
 }
 
 </style>

@@ -37,7 +37,7 @@ function formatarPreco(preco) {
 .card-livro {
   margin: 5px 10px;
   padding: 10px;
-  background-image: linear-gradient(to right, rgb(128, 49, 49), black);
+  background-image:linear-gradient( #a0522d, #111111);
   width: 200px;
   display: flex;
   flex-direction: column;

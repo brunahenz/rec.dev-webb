@@ -140,7 +140,7 @@ function validar() {
   flex-direction: column;
   align-items: center;
   font-family: 'Times New Roman', Times, serif;
-  color: brown;
+  color: #a0522d ;
 }
 
 .wrap-carrinho .carrinho-total {
@@ -224,7 +224,7 @@ function validar() {
   max-width: 700px;
   padding: 25px;
   border: 1px solid #ccc;
-  background-color: brown;
+  background-color: #a0522d ;
   width: 85vh;
   font-family: 'Times New Roman', Times, serif;
   transform: scale(0.9);
@@ -261,7 +261,7 @@ input {
   max-width: 700px;
   padding: 25px;
   border: 1px solid #ccc;
-  background-color: brown;
+  background-color: #a0522d ;
   width: 70vh;
   transform: scale(0.9);
   font-family: 'Times New Roman', Times, serif;
