@@ -24,7 +24,8 @@ const senha = ref('')
 const obs = ref('')
 const confirma = ref('')
 const ok = ref(false)
-const nome2 = ref('')
+const cartao = ref([])
+
 
 function validar() {
   if (senha.value === confirma.value) {
@@ -34,15 +35,6 @@ function validar() {
     return false;
   }
 }
-
-function validarForma() {
-  if (forma.value === "Pix") {
-    return ;
-  }
-  else {
-    return false;
-  }}
-
 
 </script>
 
@@ -135,8 +127,20 @@ function validarForma() {
       <h2 class="num">(47) 99856487</h2>
       </div>
       <div v-if="forma === 'Cartão' "> 
-      
+      <p>Selecione o cartão escolhido:</p>
+      <img class="img1" src="https://www.melhoresdestinos.com.br/wp-content/uploads/2020/02/bandeiras-3.png" alt="">
+        <input type="checkbox" v-model="cartao" v-on:keypress="ok = false" value="American Express" /> American Express
+        <input class="validar" type="checkbox" v-model="cartao" v-on:keypress="ok = false" value="MasterCard" />MasterCard
+        <input class="validar" type="checkbox" v-model="cartao" v-on:keypress="ok = false" value="Visa" /> Visa
+        <input class="validar" type="checkbox" v-model="cartao" v-on:keypress="ok = false" value="Elo" /> Elo
+        <div v-if="ok">
+        <p>O pagamento foi escolhido no cartão: {{ cartao }}</p>
+        </div>
+        <div v-if="forma === 'Boleto' "> 
+        <p>oii</p>
+        </div>
       </div>
+      <hr>
       <p>A senha confirmada é de: {{ senha }}</p>
        <p>A confirmação da senha é: {{ confirma }}</p>     
       <h2 class="titu">Observação sobre o site:</h2>
@@ -148,6 +152,17 @@ function validarForma() {
 </template>
 
 <style scoped>
+.img2{
+  height: 60px;
+  width: 70px;
+}
+.validar{
+  display: flex;
+}
+.img1{
+  height: 80px;
+  width: 550px;
+}
 .total{
   background-color: white;
   color: black;
