@@ -24,6 +24,7 @@ const senha = ref('')
 const obs = ref('')
 const confirma = ref('')
 const ok = ref(false)
+const nome2 = ref('')
 
 function validar() {
   if (senha.value === confirma.value) {
@@ -68,7 +69,7 @@ function validarForma() {
                 </p>
                 <button @click="removerItemCarrinho(item)">❌</button>
                 <p>Total: {{ formatarPreco(item.total) }}</p>
-                <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
+                
               </div>
             </div>
           </div>
@@ -77,6 +78,8 @@ function validarForma() {
       <m-button @click="RemoverItens()" texto="Limpar carrinho" />
       <hr>
       <m-button texto="Continuar comprando:" @click="$router.push({ name: 'home' })" />
+      <hr>
+      <p class="total">Total: {{ formatarPreco(carrinho.total) }}</p>
     </div>
   </div>
   <div class="container">
@@ -132,7 +135,7 @@ function validarForma() {
       <h2 class="num">(47) 99856487</h2>
       </div>
       <div v-if="forma === 'Cartão' "> 
-      <img class="img" src="https://miro.medium.com/v2/resize:fit:640/0*zPG9dqz508rmRR70." alt="">
+      
       </div>
       <p>A senha confirmada é de: {{ senha }}</p>
        <p>A confirmação da senha é: {{ confirma }}</p>     
@@ -145,6 +148,12 @@ function validarForma() {
 </template>
 
 <style scoped>
+.total{
+  background-color: white;
+  color: black;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+}
 .num{
   display: flex;
   flex-direction: column;
@@ -158,6 +167,8 @@ function validarForma() {
   align-items: center;
   font-family: 'Times New Roman', Times, serif;
   color: #a0522d ;
+  transform: scale(0.9);
+
 }
 
 .wrap-carrinho .carrinho-total {
@@ -246,7 +257,7 @@ function validarForma() {
   background-color: #a0522d ;
   width: 85vh;
   font-family: 'Times New Roman', Times, serif;
-  transform: scale(0.9);
+  transform: scale(0.8);
   font-size: 25px;
 }
 .titu{
